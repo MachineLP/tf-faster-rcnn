@@ -152,7 +152,21 @@ If you find it useful, the ``data/cache`` folder created on my side is also shar
    tar -xzvf resnet_v1_101_2016_08_28.tar.gz
    mv resnet_v1_101.ckpt res101.ckpt
    cd ../..
-   ```
+   ```
+   
+1.1 Download the training, validation, test data and VOCdevkit
+wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
+wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
+wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
+
+1.2 Extract all of these tars into one directory named VOCdevkit
+tar xvf VOCtrainval_06-Nov-2007.tar
+tar xvf VOCtest_06-Nov-2007.tar
+tar xvf VOCdevkit_08-Jun-2007.tar
+
+1.3 Create symlinks for the PASCAL VOC dataset
+cd $FRCN_ROOT/data
+ln -s $VOCdevkit VOCdevkit2007
 
 2. Train (and test, evaluation)
   ```Shell
