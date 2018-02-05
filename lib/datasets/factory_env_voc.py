@@ -18,7 +18,7 @@ from datasets.env_voc import env_voc
 
 import numpy as np
 
-imageset = "/home/rszj/liupeng/py_workSpace/tf-faster-rcnn/ZENV_train"
+# imageset = "/home/rszj/liupeng/py_workSpace/tf-faster-rcnn/ZENV_train"
 devkit = "2007"
 
 # Set up voc_<year>_<split> 
